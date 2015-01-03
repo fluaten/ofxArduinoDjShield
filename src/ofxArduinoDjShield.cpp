@@ -89,8 +89,8 @@ void ofxArduinoDjShield::analogPinChanged(const int & pinNum) {
 // ofxArduinoDjShield ---------------------------
 
 
-int ofxArduinoDjShield::PotA0(bool rescale, int min, int max) {
-	int AnalogPotentiometer = ArduinoUno.getAnalog(0);
+float ofxArduinoDjShield::PotA0(bool rescale, int min, int max) {
+	float AnalogPotentiometer = ArduinoUno.getAnalog(0);
 
 	if (rescale) {
 		AnalogPotentiometer = ofMap(float (AnalogPotentiometer), 0.0f, 1023.0f, min, max);
@@ -98,8 +98,8 @@ int ofxArduinoDjShield::PotA0(bool rescale, int min, int max) {
 	return AnalogPotentiometer;
 }
 
-int ofxArduinoDjShield::PotA1(bool rescale, int min, int max) {
-	int AnalogPotentiometer = ArduinoUno.getAnalog(1);
+float ofxArduinoDjShield::PotA1(bool rescale, int min, int max) {
+	float AnalogPotentiometer = ArduinoUno.getAnalog(1);
 
 	if (rescale) {
 		AnalogPotentiometer = ofMap(float (AnalogPotentiometer), 0.0f, 1023.0f, min, max);
@@ -107,8 +107,8 @@ int ofxArduinoDjShield::PotA1(bool rescale, int min, int max) {
 	return AnalogPotentiometer;
 }
 
-int ofxArduinoDjShield::PotA2(bool rescale, int min, int max) {
-	int AnalogPotentiometer = ArduinoUno.getAnalog(2);
+float ofxArduinoDjShield::PotA2(bool rescale, int min, int max) {
+	float AnalogPotentiometer = ArduinoUno.getAnalog(2);
 
 	if (rescale) {
 		AnalogPotentiometer = ofMap(float (AnalogPotentiometer), 0.0f, 1023.0f, min, max);

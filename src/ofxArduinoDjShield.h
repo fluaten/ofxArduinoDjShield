@@ -25,9 +25,9 @@ public:
 
 	bool bSetupArduino;
 
-	int PotA0(bool rescale = false, int min = 0, int max = 100);
-	int PotA1(bool rescale = false, int min = 0, int max = 100);
-	int PotA2(bool rescale = false, int min = 0, int max = 100);
+	float PotA0(bool rescale = false, int min = 0, int max = 100);
+	float PotA1(bool rescale = false, int min = 0, int max = 100);
+	float PotA2(bool rescale = false, int min = 0, int max = 100);
 
 	bool ButtonD2();
 	bool ButtonD3();
