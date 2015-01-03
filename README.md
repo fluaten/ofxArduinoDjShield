@@ -49,7 +49,7 @@ Code for DjShield : Nicolas Boillot <http://www.fluate.net>
 - Get a DJ Shield for Arduino : <https://nootropicdesign.com/djshield/>
 
 
-- Addo to your code :
+- Add to your code :
 
     
 

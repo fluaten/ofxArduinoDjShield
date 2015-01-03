@@ -1,7 +1,7 @@
 //
 // ofxArduinoDjShield.h
 // ofxArduinoDjShield
-//
+// https://github.com/fluaten/ofxArduinoDjShield
 // Created by Nicolas Boillot on 15-01-01.
 // Copyright 2015 fluate.net All rights reserved.
 // Arduino source from examples/communication/firmataExample
