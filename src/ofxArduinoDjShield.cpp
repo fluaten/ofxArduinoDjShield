@@ -6,12 +6,7 @@
 // Copyright 2015 fluate.net All rights reserved.
 // Addon to use easily the DJ Shield for Arduino by Nootropic Design
 // https://nootropicdesign.com/djshield/
-// Arduino source from examples/communication/firmataExamplz
-//
-// To use this addon, open Arduino (preferably Arduino 1.0) and
-// navigate to File -> Examples -> Firmata and open StandardFirmata.
-// Compile and upload StandardFirmata for your board, then close
-// the Arduino application and run this application.
+// Arduino source from examples/communication/firmataExample
 
 
 #include "ofxArduinoDjShield.h"

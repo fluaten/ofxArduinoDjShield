@@ -9,23 +9,26 @@ Addon to use easily the DJ Shield for Arduino by Nootropic Design
 <https://nootropicdesign.com/djshield/>
 
 
-   	DJ Shield for Arduino by Nootropic Design :
+   	Specification of the DJ Shield for Arduino :
 
    		- 5 tactile buttons, connected to digital pins 2-6
    		- 3 10K linear potentiometers connected to analog pins 0,1,2. (shaft is 1/4")
    		- 2 LEDs (one red, one blue) connected to analog pins 4 and 5 (analog pins can also be used as digital pins)
    		- 3 ABS plastic or aluminium knobs for the potentiometers.
+   		- Compatible with the Arduino Uno, Duemilanove, Mega or Leonardo
    
 
 
 
 
-Webpage : <http://www.fluate.net/code/ofxArduinoDjShield>
-
+Credits for the addon : 
 
 Code for Arduino from **examples/communication/firmataExample**
 
 Code for DjShield : Nicolas Boillot <http://www.fluate.net>
+
+Webpage for the addon : <http://www.fluate.net/code/ofxArduinoDjShield>
+
 
   
     
@@ -33,14 +36,12 @@ Code for DjShield : Nicolas Boillot <http://www.fluate.net>
 ## USAGE:
 
 
-- Get an arduino uno <http://arduino.cc/en/Main/arduinoBoardUno>
+- Get an Arduino Uno, Duemilanove, Mega or Leonardo <http://arduino.cc/en/Main/arduinoBoardUno>
 
 - Upload StandardFirmata on the arduino :
 
-  
-    To do on Arduino UNO :
     
-	To use this addon, open Arduino (preferably Arduino 1.0) and
+	Open Arduino app (preferably Arduino 1.0) and
 	navigate to File -> Examples -> Firmata and open StandardFirmata.
 	Compile and upload StandardFirmata for your board, then close
 	the Arduino application and run this application.
@@ -65,7 +66,7 @@ in __ofApp.h__ add :
 ===
 in __ofApp.c__ add :
 		
-		in setup()
+		- in setup() { }
 
 		DjShield.setup("/dev/tty.usbmodem1411");
 		
@@ -78,7 +79,7 @@ in __ofApp.c__ add :
         
         --------------------------------------
         
-        in update()
+       - in update() {}
         
         DjShield.udpate();
         

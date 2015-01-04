@@ -23,16 +23,16 @@ void ofApp::setup() {
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
 
-        // replace the string below with the serial port for your Arduino board
-        // you can get this from the Arduino application or via command line
-        // for OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices
-    
+	// replace the string below with the serial port for your Arduino board
+	// you can get this from the Arduino application or via command line
+	// for OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices
+
 	//DjShield.setup("/dev/tty.usbmodem1421");
 	DjShield.setup("/dev/tty.usbmodem1411");
-    
-    ofBackground(0, 0, 0);
-    
-    font.loadFont("franklinGothic.otf", 20);
+
+	ofBackground(0, 0, 0);
+
+	font.loadFont("franklinGothic.otf", 20);
 }
 
 //--------------------------------------------------------------
@@ -41,7 +41,7 @@ void ofApp::update() {
 
 	if (DjShield.bSetupArduino) {
 		PotA0 = DjShield.PotA0();
-		PotA1 = DjShield.PotA1(TRUE, 0,255);
+		PotA1 = DjShield.PotA1(TRUE, 0, 255);
 		PotA2 = DjShield.PotA2(TRUE, 0, 10);
 
 		ButtonD2 = DjShield.ButtonD2();
@@ -53,16 +53,15 @@ void ofApp::update() {
 		if (ButtonD5) {
 			DjShield.LedA4(true);
 			DjShield.LedA5(true);
-            DjShield.LedA4(false);
+			DjShield.LedA4(false);
 		}
 		else {
 			DjShield.LedA4(false);
 			DjShield.LedA5(false);
 		}
 	}
-    
-    ofBackground(PotA1, PotA1, PotA1);
-    
+
+	ofBackground(PotA1, PotA1, PotA1);
 }
 
 //--------------------------------------------------------------
