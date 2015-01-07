@@ -1,0 +1,22 @@
+[OSCDevice]
+ArduinoDevice=/dev/tty.usbmodem1411
+
+#replace the string below with the serial port for your Arduino board
+#you can get this from the Arduino application or via command line
+#for OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices
+
+[OSCSender]
+Host=127.0.0.1
+Port =12345
+
+[OSCPathPot]
+PotA0=/PotA0
+PotA1=/PotA1
+PotA2=/PotA2
+
+[OSCPathButton]
+ButtonD2=/ButtonD2
+ButtonD3=/ButtonD3
+ButtonD4=/ButtonD4
+ButtonD5=/ButtonD5
+ButtonD6=/ButtonD6
