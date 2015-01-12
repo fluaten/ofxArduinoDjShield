@@ -44,7 +44,7 @@ Webpage for the addon : <http://www.fluate.net/code/ofxArduinoDjShield>
 	Open Arduino app (preferably Arduino 1.0) and
 	navigate to File -> Examples -> Firmata and open StandardFirmata.
 	Compile and upload StandardFirmata for your board, then close
-	the Arduino application and run this application.
+	the Arduino application and run the application.
 
 
 - Get a DJ Shield for Arduino : <https://nootropicdesign.com/djshield/>
@@ -88,9 +88,9 @@ in __ofApp.c__ add :
 		bool DjShield.bSetupArduino // if arduino ready
 	
 		// Potentiometers A0-A2
-		float DjShield.PotA0(); // native, from 0 to 1023
+		float DjShield.PotA0(); // native, from 0 to 1
 		float DjShield.PotA1(TRUE, 0,255); // rescale from 0 to 255
-		float DjShield.PotA2(TRUE, 0, 10); // rescale from 0 to 10
+		float DjShield.PotA2(TRUE, 3, 10); // rescale from 3 to 10
 
 		// Buttons D2-D6
 		bool DjShield.ButtonD2();
@@ -111,7 +111,9 @@ in __ofApp.c__ add :
 
 ![ofxArduinoDjShield](http://www.fluate.net/media/blog/ofxArduinoDjShield_screen_exemple.png)
 	
-See example for more details.
+See examples for more details.
+
+See release for OSC Bridge app.
 
 	
 

@@ -26,7 +26,7 @@ public:
     ofxArduinoDjShield DjShield;
     ofTrueTypeFont		font;
     
-    int PotA0, PotA1, PotA2;
+    float PotA0, PotA1, PotA2;
 
     bool ButtonD2, ButtonD3, ButtonD4, ButtonD5, ButtonD6;
     

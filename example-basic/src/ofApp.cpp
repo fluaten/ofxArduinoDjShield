@@ -41,8 +41,8 @@ void ofApp::update() {
 
 	if (DjShield.bSetupArduino) {
 		PotA0 = DjShield.PotA0();
-		PotA1 = DjShield.PotA1(TRUE, 0, 255);
-		PotA2 = DjShield.PotA2(TRUE, 0, 10);
+		PotA1 = DjShield.PotA1(TRUE, 0.0, 255.00);
+		PotA2 = DjShield.PotA2(TRUE, 3.0, 10.0);
 
 		ButtonD2 = DjShield.ButtonD2();
 		ButtonD3 = DjShield.ButtonD3();
