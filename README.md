@@ -45,6 +45,8 @@ Webpage for the addon : <http://www.fluate.net/code/ofxArduinoDjShield>
 	navigate to File -> Examples -> Firmata and open StandardFirmata.
 	Compile and upload StandardFirmata for your board, then close
 	the Arduino application and run the application.
+	
+	![ofxArduinoDjShield](http://www.fluate.net/media/blog/ofxArduinoDjShield_firmata_exemple.png)
 
 
 - Get a DJ Shield for Arduino : <https://nootropicdesign.com/djshield/>
@@ -68,14 +70,16 @@ in __ofApp.c__ add :
 		
 		- in setup() { }
 
-		DjShield.setup("/dev/tty.usbmodem1411");
+		DjShield.setup("/dev/tty.usbmodem1d1421");
 		
 		/*
 		Replace the string below with the serial port for your Arduino board
         you can get this from the Arduino application or via command line
         
-        For OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices
+        For OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices or look the menu Tools>Port in Arduino app
         */
+        
+ ![ofxArduinoDjShield](http://www.fluate.net/media/blog/ofxArduinoDjShield_port_exemple.png)
         
         --------------------------------------
         
