@@ -29,11 +29,11 @@ public:
 	float PotA1(bool rescale = false, int min = 0, int max = 100);
 	float PotA2(bool rescale = false, int min = 0, int max = 100);
 
-	bool ButtonD2();
-	bool ButtonD3();
-	bool ButtonD4();
-	bool ButtonD5();
-	bool ButtonD6();
+	bool ButtonD2(int DelayTime = 0);
+	bool ButtonD3(int DelayTime = 0);
+	bool ButtonD4(int DelayTime = 0);
+	bool ButtonD5(int DelayTime = 0);
+	bool ButtonD6(int DelayTime = 0);
 
 	void LedA4(bool Active);
 	void LedA5(bool Active);
@@ -46,4 +46,6 @@ private:
 
 	string buttonState;
 	string potValue;
+    
+    int actualTime2, startTime2,actualTime3, startTime3,actualTime4, startTime4,actualTime5, startTime5,actualTime6, startTime6;
 };

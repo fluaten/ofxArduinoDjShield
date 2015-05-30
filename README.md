@@ -60,7 +60,7 @@ in __ofApp.h__ add :
 
 	#include "ofxArduinoDjShield.h" 
 	
-	and afer "public:" :
+	and after "public:" :
 	
 	ofxArduinoDjShield DjShield;
 	
@@ -70,24 +70,47 @@ in __ofApp.c__ add :
 		
 		- in setup() { }
 
-		DjShield.setup("/dev/tty.usbmodem1d1421");
-		
-		/*
-		Replace the string below with the serial port for your Arduino board
-        you can get this from the Arduino application or via command line
-        
-        For OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices or look the menu Tools>Port in Arduino app
-        */
+		   vector <ofSerialDeviceInfo> devices = (ofSerial()).getDeviceList();
+
+	for(auto & device : devices){
+		if(device.getDeviceID() == 0){
+			deviceInit = device.getDeviceName();
+		}
+	}
+
+	// Here the list of 4 USB Port of the computer, change them in case..
+    
+    // replace the string below with the serial port for your Arduino board
+    // you can get this from the Arduino application or via command line
+    // for OSX, in your terminal type "ls /dev/tty.*" to get a list of serial devices
+
+	string ArduinoPort01 = "tty.usbmodem1411";
+	string ArduinoPort02 = "tty.usbmodem1d11421";
+	string ArduinoPort03 = "tty.usbmodem1421";
+	string ArduinoPort04 = "tty.usbmodem1431";
+
+	if((deviceInit == ArduinoPort01) || (deviceInit == ArduinoPort02)  || (deviceInit == ArduinoPort03)  || (deviceInit == ArduinoPort04)){
+		ArduinoUSB = true;
+	}
+	else{
+		ArduinoUSB = false;
+	}
+
+	if(ArduinoUSB){
+		DjShield.setup("/dev/" + deviceInit);
+	}
         
  ![ofxArduinoDjShield](http://www.fluate.net/media/blog/ofxArduinoDjShield_port_exemple.png)
         
         --------------------------------------
         
        - in update() {}
+       
+       if(ArduinoUSB){
         
         DjShield.udpate();
         
-        then use :
+       // then use :
 
 		bool DjShield.bSetupArduino // if arduino ready
 	
@@ -100,7 +123,7 @@ in __ofApp.c__ add :
 		bool DjShield.ButtonD2();
 		bool DjShield.ButtonD3();
 		bool DjShield.ButtonD4();
-		bool DjShield.ButtonD5();
+		bool DjShield.ButtonD5(2); // 2s delay before next hit
 		bool DjShield.ButtonD6();
 
 		// LED	A4-A5
@@ -108,6 +131,8 @@ in __ofApp.c__ add :
         DjShield.LedA4(false);
         DjShield.LedA5(true);
 		DjShield.LedA5(false);
+		
+		}
 
 
 	
@@ -117,7 +142,7 @@ in __ofApp.c__ add :
 	
 See examples for more details.
 
-See release for OSC Bridge app.
+See release for OSC Bridge app : [https://github.com/fluaten/ofxArduinoDjShield/releases](https://github.com/fluaten/ofxArduinoDjShield/releases)
 
 	
 

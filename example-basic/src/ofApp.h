@@ -27,6 +27,9 @@ public:
     ofTrueTypeFont		font;
     
     float PotA0, PotA1, PotA2;
+    
+    bool ArduinoUSB;
+    string deviceInit;
 
     bool ButtonD2, ButtonD3, ButtonD4, ButtonD5, ButtonD6;
     
