@@ -73,7 +73,7 @@ void ofApp::update(){
 			ButtonD2 = DjShield.ButtonD2(1);
 			ButtonD3 = DjShield.ButtonD3();
 			ButtonD4 = DjShield.ButtonD4();
-			ButtonD5 = DjShield.ButtonD5(2);
+			ButtonD5 = DjShield.ButtonD5(0.5);
 			ButtonD6 = DjShield.ButtonD6();
 
 			if((ButtonD5) || (ButtonD6)){

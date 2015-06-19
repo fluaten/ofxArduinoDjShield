@@ -64,6 +64,10 @@ in __ofApp.h__ add :
 	
 	ofxArduinoDjShield DjShield;
 	
+	bool ArduinoUSB; // if Arduino connected to USB port
+	
+	string deviceInit;
+	
 	
 ===
 in __ofApp.c__ add :
@@ -123,7 +127,7 @@ in __ofApp.c__ add :
 		bool DjShield.ButtonD2();
 		bool DjShield.ButtonD3();
 		bool DjShield.ButtonD4();
-		bool DjShield.ButtonD5(2); // 2s delay before next hit
+		bool DjShield.ButtonD5(0.5); // 0.5 s delay before next hit
 		bool DjShield.ButtonD6();
 
 		// LED	A4-A5

@@ -117,7 +117,7 @@ float ofxArduinoDjShield::PotA2(bool rescale, int min, int max){
 	return AnalogPotentiometer;
 }
 
-bool ofxArduinoDjShield::ButtonD2(int DelayTime){
+bool ofxArduinoDjShield::ButtonD2(float DelayTime){
 	bool DigitalButton = ArduinoUno.getDigital(2);
 	if(DelayTime != 0){
 		if((((startTime2 + (DelayTime * 1000)) < actualTime2))
@@ -135,7 +135,7 @@ bool ofxArduinoDjShield::ButtonD2(int DelayTime){
 	}
 }
 
-bool ofxArduinoDjShield::ButtonD3(int DelayTime){
+bool ofxArduinoDjShield::ButtonD3(float DelayTime){
 	bool DigitalButton = ArduinoUno.getDigital(3);
     if(DelayTime != 0){
         if((((startTime3 + (DelayTime * 1000)) < actualTime3))
@@ -154,7 +154,7 @@ bool ofxArduinoDjShield::ButtonD3(int DelayTime){
 }
 
 
-bool ofxArduinoDjShield::ButtonD4(int DelayTime){
+bool ofxArduinoDjShield::ButtonD4(float DelayTime){
 	bool DigitalButton = ArduinoUno.getDigital(4);
     if(DelayTime != 0){
         if((((startTime4 + (DelayTime * 1000)) < actualTime4))
@@ -173,7 +173,7 @@ bool ofxArduinoDjShield::ButtonD4(int DelayTime){
 }
 
 
-bool ofxArduinoDjShield::ButtonD5(int DelayTime){
+bool ofxArduinoDjShield::ButtonD5(float DelayTime){
 	bool DigitalButton = ArduinoUno.getDigital(5);
     if(DelayTime != 0){
         if((((startTime5 + (DelayTime * 1000)) < actualTime5))
@@ -192,7 +192,7 @@ bool ofxArduinoDjShield::ButtonD5(int DelayTime){
 }
 
 
-bool ofxArduinoDjShield::ButtonD6(int DelayTime){
+bool ofxArduinoDjShield::ButtonD6(float DelayTime){
 	bool DigitalButton = ArduinoUno.getDigital(6);
     if(DelayTime != 0){
         if((((startTime6 + (DelayTime * 1000)) < actualTime6))

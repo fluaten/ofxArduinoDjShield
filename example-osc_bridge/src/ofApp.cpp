@@ -56,8 +56,6 @@ void ofApp::update() {
         m3.addFloatArg(DjShield.PotA2());
         sender.sendMessage(m3);
         
-        
-        
         ofxOscMessage b2;
         b2.setAddress(OscIdButtonD2);
         b2.addIntArg((int)DjShield.ButtonD2());
