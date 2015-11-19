@@ -33,11 +33,11 @@ void ofApp::update() {
         PotA1 = DjShield.PotA1();
         PotA2 = DjShield.PotA2();
         
-        ButtonD2 = DjShield.ButtonD2();
-        ButtonD3 = DjShield.ButtonD3();
-        ButtonD4 = DjShield.ButtonD4();
-        ButtonD5 = DjShield.ButtonD5();
-        ButtonD6 = DjShield.ButtonD6();
+        ButtonD2 = DjShield.ButtonD2(0.5);
+        ButtonD3 = DjShield.ButtonD3(0.5);
+        ButtonD4 = DjShield.ButtonD4(0.5);
+        ButtonD5 = DjShield.ButtonD5(0.5);
+        ButtonD6 = DjShield.ButtonD6(0.5);
         
         
         

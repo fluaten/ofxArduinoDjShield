@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ofxArduinoDjShield.xcodeproj">
+      location = "self:example-osc_bridge.xcodeproj">
    </FileRef>
 </Workspace>
